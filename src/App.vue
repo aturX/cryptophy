@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1></h1>
+    <Home :msg="posts"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './components/Home.vue'
 
 export default {
   name: 'app',
+  data: function () {
+    return {
+      posts: [ 
+        { id: 1, text: '测试文本1' },
+        { id: 2, text: '测试文本2' },
+        { id: 3, text: '测试文本3' }
+      ]
+    }
+  },
   components: {
-    HelloWorld
+    Home
   }
 }
 </script>
@@ -24,5 +33,19 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+h1 {
+    font-size:64px;
+    font-family: Simsun;
+    font-weight: normal;
+    line-height:1;
+    text-shadow:0 3px 0 rgba(0,0,0,0.1);
+}
+
+img {
+  width:15%;
+  height:15%;
+  border-radius: 50%;
 }
 </style>
