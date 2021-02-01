@@ -5,8 +5,6 @@
         {{ getRandom() }}
         </h1>
     </div>
-    
- 
   </div>
 </template>
 
@@ -41,9 +39,18 @@ export default {
 <style scoped>
 h1 {
   margin: 40px 0 0;
-  color: #42b983;
+  color: #358f66;
   letter-spacing:1rem;
   font-family: Simsun;
+  font-weight: bold;
+  line-height:1;
+  text-shadow:0 3px 0 rgba(0,0,0,0.1);
+}
+
+#box {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
 }
  
 </style>
